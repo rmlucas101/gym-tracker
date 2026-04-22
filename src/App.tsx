@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
  
 // ─── DATA ────────────────────────────────────────────────────────────────────
 const ROUTINE = [
@@ -124,7 +124,7 @@ const REST_TIME = 60; // seconds between sets
  
 // ─── HELPERS ─────────────────────────────────────────────────────────────────
 function initProgress() {
-  const p = {};
+  const p: Record<number, any> = {};
   ROUTINE.forEach((day) => {
     p[day.id] = { completed: false, cardio: false, exercises: {} };
     day.groups.forEach((g) =>
